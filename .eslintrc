@@ -1,0 +1,24 @@
+{
+  "extends": ["@berlysia/eslint-config/auto"],
+  "rules": {
+    "no-useless-constructor": "off",
+    "@typescript-eslint/no-useless-constructor": "error",
+    "react/no-unstable-nested-components": ["error", { "allowAsProps": true }],
+
+    "lines-between-class-members": "off",
+    "@typescript-eslint/lines-between-class-members": [
+      "error",
+      "always",
+      { "exceptAfterSingleLine": true, "exceptAfterOverload": true }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["*.config.js", "*rc.js"],
+      "rules": {
+        "@typescript-eslint/no-require-imports": "off",
+        "@typescript-eslint/no-var-requires": "off"
+      }
+    }
+  ]
+}
